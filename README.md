@@ -113,6 +113,29 @@ Add this in your `MainAcivity.java` oncreate:
      AdNetwork.loadBannerAd(this, R.id.adLayout); //For Adaptive Collapsable Banner
 ```
 
+Also Add These stuff into below oncreate for optimize:
+
+```java
+     @Override
+    protected void onPause() {
+        AdNetwork.pauseBanner();// Pause The Banner Ad
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        AdNetwork.resumeBanner(); //Resume The BAnner Ad
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        AdNetwork.destroyBanner(); //Destroy The Banner Ad
+        super.onDestroy();
+    }
+```
+
+
 ## Interstitial Ad Implementation
 
 
