@@ -1,18 +1,14 @@
 package com.sample;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android_admob.CustomToast;
+import com.android_admob.AdNetwork;
+import com.android_admob.InitializeAdmob;
+import com.android_admob.Test;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends InitializeAdmob {
 
 
     @Override
@@ -20,16 +16,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        AdNetwork.loadBannerAd(this, R.id.adLayout);
+
+        new Test(this);
 
     }
 
 
-    public void SHORT_TOAST(View view) {
-        CustomToast.showShortToast(this, "SHORT TOAST");
-    }
-
-    public void LONG_TOAST(View view) {
-        CustomToast.showLongToast(this, "LONG TOAST");
+    public void SHOWADS(View view) {
+        AdNetwork.showAd(this);
     }
 }
 
