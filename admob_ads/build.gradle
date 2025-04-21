@@ -1,16 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
-    namespace 'com.sample'
+
+    namespace 'com.android_admob'
     defaultConfig {
-        applicationId "com.sample"
         minSdkVersion 24
         targetSdkVersion 35
         compileSdk 35
-        versionCode 1
-        versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,11 +23,27 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
-    debugImplementation 'com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.7'
-    implementation project(':admob_ads')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+android {
+    publishing {
+        singleVariant("release")
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.mobarokOP'
+            artifactId = 'AdmobAdSdk'
+            version = '0.0.1'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
