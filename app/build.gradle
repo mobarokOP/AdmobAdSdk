@@ -28,4 +28,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(':admob_ads')
+    //implementation 'com.github.mobarokOP:AdmobAdSdk:0.0.2'
 }
