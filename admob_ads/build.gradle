@@ -45,7 +45,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.mobarokOP'
             artifactId = 'AdmobAdSdk'
-            version = '0.0.3'
+            version = '1.0.0'
 
             afterEvaluate {
                 from components.release

@@ -163,6 +163,24 @@ public class AdNetwork implements Serializable {
         adView.loadAd(adRequest);
     }
 
+    public static void destroyBanner(){
+        if (adView != null) {
+            adView.destroy();
+        }
+    }
+
+    public static void pauseBanner(){
+        if (adView != null) {
+            adView.pause();
+        }
+    }
+
+    public static void resumeBanner(){
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
 
 
 }

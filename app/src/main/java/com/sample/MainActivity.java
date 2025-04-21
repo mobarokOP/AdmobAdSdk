@@ -5,7 +5,6 @@ import android.view.View;
 
 import com.android_admob.AdNetwork;
 import com.android_admob.InitializeAdmob;
-import com.android_admob.Test;
 
 
 public class MainActivity extends InitializeAdmob {
@@ -18,7 +17,6 @@ public class MainActivity extends InitializeAdmob {
 
         AdNetwork.loadBannerAd(this, R.id.adLayout);
 
-        new Test(this);
 
     }
 
