@@ -31,6 +31,21 @@ If you are using `settings.gradle.kts`, add the following:
 maven { setUrl("https://jitpack.io") }
 ```
 
+
+Version:
+[![](https://jitpack.io/v/mobarokOP/AdmobAdSdk.svg)](https://jitpack.io/#mobarokOP/AdmobAdSdk)
+
+Add this in your `build.gradle`
+```groovy
+implementation 'com.github.mobarokOP:AdmobAdSdk:1.0.0'
+```
+
+If you are using `build.gradle.kts`, add the following:
+```kotlin
+implementation("com.github.mobarokOP:AdmobAdSdk:1.0.0")
+```
+
+
 Add this into your `strings.xml` file:
 ```xml
 <!--Warning don't change any resources name.-->
@@ -76,19 +91,6 @@ public class SampleActivity extends InitializeAdmob {
 
 ![image](https://github.com/user-attachments/assets/ed2cc67b-e5fd-466b-bd52-0234962ebd1e)
 
-
-Version:
-[![](https://jitpack.io/v/mobarokOP/AdmobAdSdk.svg)](https://jitpack.io/#mobarokOP/AdmobAdSdk)
-
-Add this in your `build.gradle`
-```groovy
-implementation 'com.github.mobarokOP:AdmobAdSdk:1.0.0'
-```
-
-If you are using `build.gradle.kts`, add the following:
-```kotlin
-implementation("com.github.mobarokOP:AdmobAdSdk:1.0.0")
-```
 
 
 ## Banner Ad Implementation
