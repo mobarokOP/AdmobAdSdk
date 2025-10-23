@@ -43,7 +43,7 @@ android {
 publishing {
     publications {
         release(MavenPublication) {
-            groupId = 'com.github.LoveiT'
+            groupId = 'com.github.mobarokOP'
             artifactId = 'AdmobAdSdk'
             version = '2.0.0'
 
