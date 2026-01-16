@@ -7,7 +7,9 @@ android {
     defaultConfig {
         minSdkVersion 24
         targetSdkVersion 36
-        compileSdk 36
+        compileSdk {
+            version = release(36)
+        }
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -27,9 +29,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation "com.google.android.gms:play-services-ads:24.7.0"
-    implementation "com.google.android.ump:user-messaging-platform:3.2.0"
-    implementation "androidx.lifecycle:lifecycle-process:2.9.4"
+    implementation "com.google.android.gms:play-services-ads:24.9.0"
+    implementation "com.google.android.ump:user-messaging-platform:4.0.0"
+    implementation "androidx.lifecycle:lifecycle-process:2.10.0"
 
 
 }
@@ -45,7 +47,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.mobarokOP'
             artifactId = 'AdmobAdSdk'
-            version = '2.0.0'
+            version = '2.1.0'
 
             afterEvaluate {
                 from components.release

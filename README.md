@@ -37,12 +37,12 @@ Version:
 
 Add this in your `build.gradle`
 ```groovy
-implementation 'com.github.mobarokOP:AdmobAdSdk:2.0.0'
+implementation 'com.github.mobarokOP:AdmobAdSdk:2.1.0'
 ```
 
 If you are using `build.gradle.kts`, add the following:
 ```kotlin
-implementation("com.github.mobarokOP:AdmobAdSdk:2.0.0")
+implementation("com.github.mobarokOP:AdmobAdSdk:2.1.0")
 ```
 
 
