@@ -24,7 +24,6 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import java.io.Serializable;
 
 public class AdNetwork implements Serializable {
-    private static InterstitialAd mInterstitialAd;
 
 
 
